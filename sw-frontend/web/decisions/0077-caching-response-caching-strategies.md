@@ -1,0 +1,23 @@
+# 76. caching-response-caching-strategies
+
+Date: 2022-06-27
+
+## Status
+
+Accepted
+
+## Context
+
+Where caching lies and why you need it in every one of these levels:
+Caching at FE
+Caching at BFF
+
+
+
+## Decision
+
+The change that we're proposing or have agreed to implement.
+
+## Consequences
+
+What becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.

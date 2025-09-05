@@ -1,0 +1,30 @@
+# Typical development workflow
+The typical day-to-day flow includes normal changes that developers make to the code, changes that do not bring any heightened sense of urgency. These changes are ordinary in terms of size and complexity for your codebase and, generally, will make up the bulk of all the changes your developers make. Since this flow will be used the most frequently, your strategy here must ensure proper coordination among the developers and support all relevant policies such as automated testing, pull requests, and deployments.
+
+## Emergency hotfixes
+An emergency hotfix is when a particular incident or issue has been expedited to deal with some emergent situation, normally bug fixes. Your flow must account for a developer who needs to make an urgent change and get it all the way through your process and into production while still aligning with your typical development workflow.
+
+## Small vs. large changes 
+As the industry has evolved, the emphasis on developers working on smaller changes and limited batch sizes has increased due to broader use of flow-based delivery practices. However, there are still times when you must make large, complex changes, and your branching strategy must accommodate those situations.
+
+## Standard vs. experimental changes
+Developers feel greater certainty about how standard code changes will perform than with experimental code changes. For example, if you’re evaluating a new library or framework, you may feel uncertain about how well it integrates with your codebase. In that case, your change may or may not actually go to production but still needs to be shared with other developers. Your branching strategy must account for these types of experimental changes.
+
+# Common types of branches
+Trunk branch
+Every Git repository has a trunk (also referred to as main, mainline, or the master branch). When a Git repository is created, the trunk exists automatically as the implicit first branch. The use of a trunk and the timing of changes landing on it vary depending on the exact branching strategy being used. In trunk-based development, the trunk is the central branch to which all developers send their code changes.
+
+## Development branch
+The development branch is a long-lived feature branch that holds changes made by developers before they’re ready to go to production. It parallels the trunk and is never removed. Some teams have the development branch correspond with a non-production environment. As such, commits to the development branch trigger test environment deployments. Development and trunk are frequently bidirectionally integrated, and it’s typical for a team member to bear the responsibility of integrating them.
+
+## Feature branch
+A feature branch can be short- or long-lived depending on the specific branching flow. The branch often is used by a single developer for only their changes, but it is possible to share it with other developers as well. Again, the branching strategy will determine how exactly you define a “feature branch”. 
+
+## Release branch
+A release branch can be either short-lived or long-lived depending on the strategy. In either case, the release branch reflects a set of changes that are intended to go through the production release process.
+
+## Hotfix branch
+A hotfix branch is a branch that’s used generally to hold changes related to emergency bug fixes. They can be short-lived or long-lived, though generally they exist as long-lived branches split off from a release branch. They tend to be more common in teams with explicitly versioned products, such as installed applications.
+
+
+[1] Trunk-based Branching:https://launchdarkly.com/blog/git-branching-strategies-vs-trunk-based-development/
